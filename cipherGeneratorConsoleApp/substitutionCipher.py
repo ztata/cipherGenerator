@@ -42,6 +42,18 @@ def encode(subKey: int, msg: str):
         encodedMessage += newChar
     print("Encoded message: " + encodedMessage)
 
+def encodeForFile(subKey: int, msg: str):
+    encodedMessage = ""
+    numsList = [*range(32,127)]
+    for char in msg:
+        charNum = ord(char)
+        index = numsList.index(charNum)
+        index = index + subKey       
+        newCharNum = numsList[index % len(numsList)]
+        newChar = chr(newCharNum)
+        encodedMessage += newChar
+    return encodedMessage
+
 def decode(subKey: int, msg: str):
     print(" ")
     print("Substitution Key: " + str(subKey))

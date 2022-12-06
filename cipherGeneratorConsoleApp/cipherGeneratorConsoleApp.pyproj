@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="cipherGeneratorConsoleApp.py" />
+    <Compile Include="encodeTextFile.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="helperMethods.py">
       <SubType>Code</SubType>
     </Compile>

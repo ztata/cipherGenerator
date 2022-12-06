@@ -1,7 +1,11 @@
 import os
 import substitutionCipher
 import vigenereCipher
+import encodeTextFile
 
+
+
+encodeTextFile.encodeTextFile()
 os.system('cls')
 repeat = True
 while repeat:
@@ -26,9 +30,8 @@ while repeat:
     if userInput == "1":
         substitutionCipher.runSubstitutionCipher()
     else:
-        vigenereCipher.checkIfItWorks()
-
-    print("Thats the end of what we have at present ")
+        vigenereCipher.runVigenereCipher()
+   
 
 
     #Make this into a separate method later on
